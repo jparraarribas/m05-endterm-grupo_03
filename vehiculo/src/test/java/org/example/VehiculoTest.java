@@ -11,3 +11,4 @@ class VehiculoTest {
         assertEquals(10, v.getVelocidad());
     }
 }
+
