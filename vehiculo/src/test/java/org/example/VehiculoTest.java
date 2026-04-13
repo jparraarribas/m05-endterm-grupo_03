@@ -7,11 +7,10 @@ import org.junit.jupiter.api.Test;
 class VehiculoTest {
 
     @Test
-    void acelerar_deberiaAumentarVelocidad() {
+    void frenar_deberiaDisminuirVelocidad() {
         Vehiculo v = new Vehiculo();
-        v.acelerar(10);
-        assertEquals(10, v.getVelocidad());
+        v.frenar(5);
+        assertEquals(15, v.getVelocidad());
     }
-
 }
 
