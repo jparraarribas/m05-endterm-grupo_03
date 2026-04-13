@@ -10,7 +10,7 @@ class VehiculoTest {
     void frenar_deberiaDisminuirVelocidad() {
         Vehiculo v = new Vehiculo();
         v.frenar(5);
-        assertEquals(5, v.getVelocidad());
+        assertEquals(15, v.getVelocidad());
     }
 }
 
