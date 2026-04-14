@@ -5,6 +5,11 @@ public class Vehiculo {
     public void frenar(int cantidad) {
         velocidad -= cantidad;
     }
+
+    public void acelerar(int cantidad) {
+        velocidad += cantidad;
+    }
+
     public int getVelocidad() {
         return velocidad;
     }

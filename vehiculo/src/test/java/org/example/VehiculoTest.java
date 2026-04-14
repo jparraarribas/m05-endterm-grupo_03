@@ -12,5 +12,12 @@ class VehiculoTest {
         v.frenar(5);
         assertEquals(15, v.getVelocidad());
     }
+
+    @Test
+    void acelerar_deberiaAumentarVelocidad() {
+        Vehiculo v = new Vehiculo();
+        v.acelerar(10);
+        assertEquals(10, v.getVelocidad());
+    }
 }
 
