@@ -25,5 +25,12 @@ class VehiculoTest {
         v.acelerar(150);
         assertEquals(100, v.getVelocidad());
     }
+
+    @Test
+    void frenar_noDeberiaSerNegativa() {
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        v.frenar(50);
+        assertEquals(0, v.getVelocidad());
+    }
 }
 
