@@ -14,7 +14,7 @@ public class Vehiculo {
     }
 
     public void acelerar(int incremento) {velocidadActual = Math.min(velocidadActual + incremento, velocidadMaxima);}
-    public void frenar(int cantidad) { velocidadActual -= cantidad; }
+    public void frenar(int decremento) {velocidadActual = Math.max(velocidadActual - decremento, 0);}
     public int getVelocidad() { return velocidadActual; }
     public int getVelocidadMaxima() { return velocidadMaxima; }
     public String getMarca() { return marca; }
