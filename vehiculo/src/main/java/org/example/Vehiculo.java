@@ -13,7 +13,7 @@ public class Vehiculo {
         this.velocidadActual = 0;
     }
 
-    public void acelerar(int cantidad) { velocidadActual += cantidad; }
+    public void acelerar(int incremento) {velocidadActual = Math.min(velocidadActual + incremento, velocidadMaxima);}
     public void frenar(int cantidad) { velocidadActual -= cantidad; }
     public int getVelocidad() { return velocidadActual; }
     public int getVelocidadMaxima() { return velocidadMaxima; }
