@@ -15,6 +15,16 @@ public class Vehiculo {
 
     public void acelerar(int incremento) {velocidadActual = Math.min(velocidadActual + incremento, velocidadMaxima);}
     public void frenar(int decremento) {velocidadActual = Math.max(velocidadActual - decremento, 0);}
+
+
+    private boolean encendido = false;
+    public void arrancar() {
+        if (!encendido) {
+            encendido = true;
+        }
+    }
+
+    public boolean isEncendido() { return encendido; }
     public int getVelocidad() { return velocidadActual; }
     public int getVelocidadMaxima() { return velocidadMaxima; }
     public String getMarca() { return marca; }
