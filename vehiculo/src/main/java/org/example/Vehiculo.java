@@ -13,8 +13,15 @@ public class Vehiculo {
         this.velocidadActual = 0;
     }
 
-    public void acelerar(int incremento) {velocidadActual = Math.min(velocidadActual + incremento, velocidadMaxima);}
-    public void frenar(int decremento) {velocidadActual = Math.max(velocidadActual - decremento, 0);}
+    public void acelerar(int incremento) {
+        if (incremento < 0) return;
+        velocidadActual = Math.min(velocidadActual + incremento, velocidadMaxima);
+    }
+
+    public void frenar(int decremento) {
+        if (decremento < 0) return;
+        velocidadActual = Math.max(velocidadActual - decremento, 0);
+    }
 
 
     private boolean encendido = false;
