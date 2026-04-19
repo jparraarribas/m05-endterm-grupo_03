@@ -29,4 +29,8 @@ public class Vehiculo {
     public int getVelocidadMaxima() { return velocidadMaxima; }
     public String getMarca() { return marca; }
     public String getModelo() { return modelo; }
+    public void detener() {
+        velocidadActual = 0;
+    }
+
 }
