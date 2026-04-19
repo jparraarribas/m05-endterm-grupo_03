@@ -33,4 +33,11 @@ public class Vehiculo {
         velocidadActual = 0;
     }
 
+    public void setVelocidadMaxima(int nuevaVelocidadMaxima) {
+        this.velocidadMaxima = nuevaVelocidadMaxima;
+        if (velocidadActual > velocidadMaxima) {
+            velocidadActual = velocidadMaxima;
+        }
+    }
+
 }

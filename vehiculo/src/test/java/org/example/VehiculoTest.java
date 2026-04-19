@@ -63,5 +63,20 @@ class VehiculoTest {
         v.detener();
         assertTrue(v.isEncendido());
     }
+
+    @Test
+    void setVelocidadMaxima_deberiaActualizarVelocidadMaxima() {
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        v.setVelocidadMaxima(150);
+        assertEquals(150, v.getVelocidadMaxima());
+    }
+
+    @Test
+    void setVelocidadMaxima_ajustaVelocidadActualSiBaja() {
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        v.acelerar(80);
+        v.setVelocidadMaxima(50);
+        assertEquals(50, v.getVelocidad());
+    }
 }
 
