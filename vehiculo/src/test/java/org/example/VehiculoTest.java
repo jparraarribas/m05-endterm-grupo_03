@@ -47,6 +47,20 @@ class VehiculoTest {
         v.arrancar();
         assertEquals(true, v.isEncendido());
     }
+    @Test
+    void detener_deberiaPonerVelocidadACero() {
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        v.acelerar(50);
+        v.detener();
+        assertEquals(0, v.getVelocidad());
+    }
 
+    @Test
+    void detener_noApagaElVehiculo() {
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        v.arrancar();
+        v.detener();
+        assertTrue(v.isEncendido());
+    }
 }
 
