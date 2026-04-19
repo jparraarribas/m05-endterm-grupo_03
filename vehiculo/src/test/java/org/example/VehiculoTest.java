@@ -2,6 +2,7 @@ package org.example;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class VehiculoTest {
 
@@ -76,6 +77,22 @@ class VehiculoTest {
         Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
         v.acelerar(80);
         v.setVelocidadMaxima(50);
+        assertEquals(50, v.getVelocidad());
+    }
+
+    @Test
+    void acelerar_noHaceNadaSiIncrementoEsNegativo() {
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        v.acelerar(50);
+        v.acelerar(-10);
+        assertEquals(50, v.getVelocidad());
+    }
+
+    @Test
+    void frenar_noHaceNadaSiDecrementoEsNegativo() {
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        v.acelerar(50);
+        v.frenar(-10);
         assertEquals(50, v.getVelocidad());
     }
 }
