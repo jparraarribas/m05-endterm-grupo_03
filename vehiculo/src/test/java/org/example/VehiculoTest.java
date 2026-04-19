@@ -32,5 +32,21 @@ class VehiculoTest {
         v.frenar(50);
         assertEquals(0, v.getVelocidad());
     }
+
+    @Test
+    void arrancar_deberiaEncenderElVehiculo() {
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        v.arrancar();
+        assertEquals(true, v.isEncendido());
+    }
+
+    @Test
+    void arrancar_noHaceNadaSiYaEstaEncendido() {
+        Vehiculo v = new Vehiculo("Toyota", "Corolla", 100);
+        v.arrancar();
+        v.arrancar();
+        assertEquals(true, v.isEncendido());
+    }
+
 }
 
