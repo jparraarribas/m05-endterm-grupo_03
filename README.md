@@ -2,7 +2,7 @@
 
 
 Documento con los requisitos funcionales acordados por el equipo para la creación de la clase `Vehiculo`.  
-Estos requisitos podrán evolucionar a medida que avancemos con **Test Driven Development (TDD)**.
+
 
 ---
 
